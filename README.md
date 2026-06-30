@@ -22,7 +22,7 @@ The preprocessed dataset is available from **Baidu Netdisk**:
 
 https://pan.baidu.com/s/1au5kFaPwL1NqRcZtnXJJXA?pwd=httt
 
-After downloading and extracting the archive, place the dataset into the `im2p-data` directory.
+After downloading and extracting the archive, place the dataset into the `im2p_data` directory.
 
 If you would like to preprocess the dataset from scratch, download the original **Visual Genome** dataset:
 
@@ -42,7 +42,7 @@ https://pan.baidu.com/s/1RC8kc08vND1VtI6pfYIvKw?pwd=2iyg
 Place the checkpoint file into the `checkpoint` directory and run:
 
 ```bash
-python test.py --checkpoint model_best.pth
+python test.py --checkpoint model_best.pth --test_feats_dir 'im2p_data/test-rep-feats-20/'
 ```
 
 ## Training
@@ -50,5 +50,5 @@ python test.py --checkpoint model_best.pth
 To train the model from scratch, run:
 
 ```bash
-python train.py
+python train.py --train_feats_dir 'im2p_data/train-rep-feats-20/'
 ```
